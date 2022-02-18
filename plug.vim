@@ -49,6 +49,9 @@ if has("nvim")
   Plug 'tpope/vim-commentary'
   " Surround
   Plug 'blackCauldron7/surround.nvim'
+  " Latex
+  Plug 'lervag/vimtex'
+  Plug 'xuhdev/vim-latex-live-preview'
 endif
 
 call plug#end()

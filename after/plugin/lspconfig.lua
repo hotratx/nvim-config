@@ -93,3 +93,9 @@ nvim_lsp['jedi_language_server'].setup{
     },
   }
 }
+
+nvim_lsp['texlab'].setup{
+    cmd = { "texlab" },
+    filetypes = { "tex", "bib" },
+    single_file_support = true
+}
