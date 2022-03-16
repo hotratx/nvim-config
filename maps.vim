@@ -1,5 +1,8 @@
 " Description: Keymaps
 
+" Escace Esc
+inoremap jh <Esc>
+
 nnoremap <S-C-p> "0p
 " Delete without yank
 nnoremap <leader>d "_d
