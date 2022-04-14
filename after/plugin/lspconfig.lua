@@ -39,7 +39,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'tsserver', 'pyright', 'rust_analyzer', 'vuels' }
+local servers = { 'tsserver', 'pyright', 'rust_analyzer', 'vuels', 'clangd' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -49,50 +49,6 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
-
--- require'lspconfig'.jedi_language_server.setup{}
--- require'lspconfig'.vuels.setup{}
-
-
-
-nvim_lsp['jedi_language_server'].setup{
-    on_attach = on_attach,
-    cmd = { "jedi-language-server" },
-    filetypes = { "python" },
-    single_file_support = true,
-    init_options = {
-    filetypes = {
-     python = {"flake8"},
-    },
-    linters = {
-      flake8 = {
-        debounce = 100,
-        sourceName = "flake8",
-        command = "flake8",
-        args = {
-          "--format",
-          "%(row)d:%(col)d:%(code)s:%(code)s: %(text)s",
-          "%file",
-        },
-        formatPattern = {
-          "^(\\d+):(\\d+):(\\w+):(\\w).+: (.*)$",
-          {
-              line = 1,
-              column = 2,
-              message = {"[", 3, "] ", 5},
-              security = 4
-          }
-        },
-        securities = {
-          EE = "error",
-          W = "warning",
-          F = "info",
-          B = "hint",
-        },
-      },
-    },
-  }
-}
 
 nvim_lsp['texlab'].setup{
     cmd = { "texlab" },
