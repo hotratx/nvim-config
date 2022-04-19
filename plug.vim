@@ -52,6 +52,8 @@ if has("nvim")
   " Latex
   Plug 'lervag/vimtex'
   Plug 'xuhdev/vim-latex-live-preview'
+  " Ranger in neovim
+  Plug 'kevinhwang91/rnvimr'
 endif
 
 call plug#end()
