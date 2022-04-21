@@ -3,6 +3,8 @@ if !exists('g:loaded_telescope') | finish | endif
 nnoremap <silent> ;f <cmd>Telescope find_files<cr>
 nnoremap <silent> ;g <cmd>Telescope live_grep<cr>
 nnoremap <silent> \\ <cmd>Telescope buffers<cr>
+nnoremap <silent> \a <cmd>Telescope lsp_references<cr>
+nnoremap <silent> \g <cmd>Telescope git_status<cr>
 nnoremap <silent> ;t <cmd>Telescope help_tags<cr>
 nnoremap <silent> ;d <cmd>Telescope file_browser<cr>
 nnoremap <silent> ;u <cmd>cd %:h<cr>
