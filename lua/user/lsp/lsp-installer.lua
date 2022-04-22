@@ -14,6 +14,11 @@ lsp_installer.on_server_ready(function(server)
     capabilities = require("user.lsp.handlers").capabilities,
   }
 
+  if server.name == "vimls" then
+    local vimls_opts = require "user.lsp.settings.vimls"
+    opts = vim.tbl_deep_extend("force", vimls_opts, opts)
+  end
+
   if server.name == "jsonls" then
     local jsonls_opts = require "user.lsp.settings.jsonls"
     opts = vim.tbl_deep_extend("force", jsonls_opts, opts)

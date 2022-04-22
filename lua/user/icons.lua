@@ -2,17 +2,17 @@
 -- go to the above and then enter <c-v>u<unicode> and the symbold should appear
 -- or go here and upload the font file: https://mathew-kurian.github.io/CharacterMap/
 -- find more here: https://www.nerdfonts.com/cheat-sheet
-if vim.fn.has "mac" == 1 then
+if vim.fn.has "mac" ~= 1 then
   -- elseif vim.fn.has "mac" == 1 then
   return {
     kind = {
       Text = "",
-      -- Method = "m",
-      -- Function = "",
-      -- Constructor = "",
-      Method = "",
-      Function = "",
-      Constructor = "",
+      Method = "m",
+      Function = "",
+      Constructor = "",
+      -- Method = "",
+      -- Function = "",
+      -- Constructor = "",
       Field = "",
       -- Variable = "",
       Variable = "",
@@ -109,16 +109,21 @@ else
   --   פּ ﯟ   蘒練 some other good icons
   return {
     kind = {
-      Text = " ",
-      Method = " ",
-      Function = " ",
-      Constructor = " ",
+      Text = "",
+      -- Text = " ",
+      Method = "m",
+      Function = "",
+      -- Method = "ﲾ",
+      -- Function = "",
+      -- Function = " ",
+      Constructor = "",
       Field = " ",
-      Variable = " ",
-      Class = " ",
+      Variable = "",
+      Class = "",
       Interface = " ",
       Module = " ",
       Property = " ",
+      Property = "",
       Unit = " ",
       Value = " ",
       Enum = " ",
@@ -132,8 +137,10 @@ else
       Constant = " ",
       Struct = " ",
       Event = " ",
-      Operator = " ",
-      TypeParameter = " ",
+      -- Operator = " ",
+      Operator = "",
+      -- TypeParameter = " ",
+      TypeParameter = "",
       Misc = " ",
     },
     type = {
@@ -195,10 +202,16 @@ else
       Hint = " ",
     },
     misc = {
-      Robot = " ",
-      Squirrel = " ",
-      Tag = " ",
-      Watch = " ",
+      Robot = "ﮧ",
+      Squirrel = "",
+      Tag = "",
+      Watch = "",
     },
+    -- misc = {
+    --   Robot = " ",
+    --   Squirrel = " ",
+    --   Tag = " ",
+    --   Watch = " ",
+    -- },
   }
 end

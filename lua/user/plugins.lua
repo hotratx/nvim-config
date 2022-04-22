@@ -40,8 +40,9 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  use 'nvim-lualine/lualine.nvim'
-  use 'nvim-lua/plenary.nvim'
+  use "wbthomason/packer.nvim" -- Have packer manage itself
+  use "folke/which-key.nvim"
+  use 'nvim-lua/plenary.nvim' -- Useful lua functions used ny lots of plugins
   -- Icones do git que aparecem do lado o texto
   use 'Shougo/defx.nvim'
 
@@ -68,7 +69,6 @@ return packer.startup(function(use)
   use "ray-x/lsp_signature.nvim"
   use "b0o/SchemaStore.nvim"
 
-
   -- CMP
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
@@ -76,12 +76,10 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
 
-  -- Ver definições 
-  use 'ray-x/lsp_signature.nvim'
-
   -- Temas cores
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use 'sainnhe/sonokai'
+  use 'nvim-lualine/lualine.nvim'
 
   -- Transparencia
   use 'xiyaowong/nvim-transparent'
@@ -97,14 +95,15 @@ return packer.startup(function(use)
   use 'windwp/nvim-autopairs' 
 
   -- Popup
-  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
 
   -- Markdown preview
   use 'iamcco/markdown-preview.nvim'
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
+  use "rafamadriz/friendly-snippets"
+
   -- Commentary
   use 'tpope/vim-commentary'
 

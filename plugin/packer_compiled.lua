@@ -99,11 +99,6 @@ _G.packer_plugins = {
     path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  cmp_luasnip = {
-    loaded = true,
-    path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
-    url = "https://github.com/saadparwaiz1/cmp_luasnip"
-  },
   colorschemes = {
     loaded = true,
     path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/colorschemes",
@@ -118,6 +113,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
@@ -178,6 +178,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["packer.nvim"] = {
+    loaded = true,
+    path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -263,6 +268,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/vimtex",
     url = "https://github.com/lervag/vimtex"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
