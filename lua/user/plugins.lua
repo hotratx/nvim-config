@@ -85,8 +85,13 @@ return packer.startup(function(use)
   use 'xiyaowong/nvim-transparent'
 
   -- Git diff in the sign column
-  use 'tpope/vim-fugitive'
-  use 'airblade/vim-gitgutter'
+  use "lewis6991/gitsigns.nvim"
+  use "pwntester/octo.nvim"
+  -- use 'tpope/vim-fugitive'
+  -- use 'airblade/vim-gitgutter'
+
+  -- Motion
+  use "phaazon/hop.nvim"
 
   -- emmet expand html
   use 'mattn/emmet-vim'

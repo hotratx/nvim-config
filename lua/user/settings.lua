@@ -15,7 +15,7 @@ local options = {
   conceallevel = 0,                        -- so that `` is visible in markdown files
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
   -- clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-  foldmethod = marker,
+  foldmethod = 'marker',
   backup = false,                          -- creates a backup file
   number = true,                           -- set numbered lines
   relativenumber = true,                  -- set relative numbered lines
@@ -62,6 +62,7 @@ vim.cmd [[set cursorline]]
 vim.cmd [[highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40]]
 vim.cmd [[set shell=zsh]]
 vim.cmd [[set clipboard+=unnamedplus]]
+vim.wo.colorcolumn = '80'
 
 
 vim.opt.shortmess:append "c"
