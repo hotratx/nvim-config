@@ -77,8 +77,10 @@ return packer.startup(function(use)
   use 'hrsh7th/nvim-cmp'
 
   -- Temas cores
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use "rafamadriz/neon"
   use 'sainnhe/sonokai'
+  use 'marko-cerovac/material.nvim'
   use 'nvim-lualine/lualine.nvim'
 
   -- Transparencia
@@ -121,4 +123,12 @@ return packer.startup(function(use)
 
   -- Ranger in neovim
   use 'kevinhwang91/rnvimr'
+
+  -- Theme Startify
+  use {
+      'goolord/alpha-nvim',
+      config = function ()
+          require'alpha'.setup(require'alpha.themes.startify'.config)
+      end
+  }
 end)

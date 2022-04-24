@@ -31,7 +31,7 @@ local options = {
   scrolljump = 8,
   sidescrolloff = 8,
   laststatus = 2,
-  -- vim.opt.termguicolors = true                    -- set term gui colors (most terminals support this)
+  -- termguicolors = true                    -- set term gui colors (most terminals support this)
   timeoutlen = 1000,                       -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true,                         -- enable persistent undo
   updatetime = 300,                        -- faster completion (4000ms default)
@@ -40,6 +40,7 @@ local options = {
 }
 
 
+vim.opt.termguicolors = true
 vim.g.mkdp_auto_start = 0
 vim.g.livepreview_previewer = 'zathura'
 vim.g.vimtex_view_method = 'zathura'
