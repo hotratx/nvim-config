@@ -144,8 +144,8 @@ vim.api.nvim_set_keymap(
 
 
 -- Split window
-keymap("n", "ss", "<cmd>split<Return><C-w>w", opts)
-keymap("n", "sv", "<cmd>vsplit<Return><C-w>w", opts)
+keymap("n", "<leader>s", "<cmd>split<Return><C-w>w", opts)
+keymap("n", "<leader>v", "<cmd>vsplit<Return><C-w>w", opts)
 
 -- Select all
 keymap("n", "<C-a>", "gg<S-v>G", opts)

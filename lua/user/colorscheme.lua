@@ -1,3 +1,6 @@
+require("transparent").setup({
+  enable = true,
+})
 vim.g.neon_style = 'dark'
 -- vim.g.material_style = 'oceanic'
 -- vim.g.material_style = "darker"
