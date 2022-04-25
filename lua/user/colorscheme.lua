@@ -1,7 +1,8 @@
--- vim.g.neon_style = 'dark'
+vim.g.neon_style = 'dark'
 -- vim.g.material_style = 'oceanic'
-vim.g.material_style = "darker"
-local colorscheme = "material"
+-- vim.g.material_style = "darker"
+-- vim.g.material_style = "deep ocean"
+local colorscheme = "neon"
 -- vim.cmd("colorscheme sonokai")
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
