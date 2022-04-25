@@ -76,8 +76,13 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
 
-  -- Temas cores
+  -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use({
+    "catppuccin/nvim",
+    as = "catppuccin"
+  })
+  use "projekt0n/github-nvim-theme"
   use "rafamadriz/neon"
   use 'sainnhe/sonokai'
   use 'marko-cerovac/material.nvim'
