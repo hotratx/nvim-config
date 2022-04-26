@@ -68,6 +68,12 @@ return packer.startup(function(use)
   use "simrat39/symbols-outline.nvim"
   use "ray-x/lsp_signature.nvim"
   use "b0o/SchemaStore.nvim"
+    use {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  }
+  use "github/copilot.vim"
+  use "RRethy/vim-illuminate"
 
   -- CMP
   use 'hrsh7th/cmp-nvim-lsp'

@@ -15,3 +15,5 @@ require "user.rnvimr"
 require "user.gitsigns"
 require "user.octo"
 require "user.hop"
+require "user.illuminate"
+
