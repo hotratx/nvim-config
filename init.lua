@@ -1,4 +1,3 @@
-require "user.catppuccin"
 require "user.colorscheme"
 require "user.settings"
 require "user.plugins"
@@ -16,4 +15,5 @@ require "user.gitsigns"
 require "user.octo"
 require "user.hop"
 require "user.illuminate"
+require "user.catppuccin"
 
