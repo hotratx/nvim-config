@@ -53,8 +53,10 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope-ui-select.nvim"
   use "nvim-telescope/telescope-file-browser.nvim"
 
-  -- Treesetter
+  -- Treesitter
   use 'nvim-treesitter/nvim-treesitter'
+  use 'p00f/nvim-ts-rainbow'
+
 
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
