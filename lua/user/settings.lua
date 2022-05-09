@@ -42,10 +42,6 @@ local options = {
 
 vim.opt.termguicolors = true
 vim.g.mkdp_auto_start = 0
-vim.g.livepreview_previewer = 'zathura'
-vim.g.vimtex_view_method = 'zathura'
-vim.g.vimtex_view_general_viewer = 'zathura'
-vim.g.vimtex_compiler_method = 'latexrun'
 
 for k, v in pairs(options) do
   vim.opt[k] = v

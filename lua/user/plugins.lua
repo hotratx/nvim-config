@@ -70,7 +70,7 @@ return packer.startup(function(use)
   use "simrat39/symbols-outline.nvim"
   use "ray-x/lsp_signature.nvim"
   use "b0o/SchemaStore.nvim"
-    use {
+  use {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   }
@@ -114,13 +114,13 @@ return packer.startup(function(use)
   use 'mattn/emmet-vim'
 
   -- autopairs
-  use 'windwp/nvim-autopairs' 
+  use 'windwp/nvim-autopairs'
 
   -- Popup
   use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
 
   -- Markdown preview
-  use 'iamcco/markdown-preview.nvim'
+  use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
@@ -141,9 +141,9 @@ return packer.startup(function(use)
 
   -- Theme Startify
   use {
-      'goolord/alpha-nvim',
-      config = function ()
-          require'alpha'.setup(require'alpha.themes.startify'.config)
-      end
+    'goolord/alpha-nvim',
+    config = function()
+      require 'alpha'.setup(require 'alpha.themes.startify'.config)
+    end
   }
 end)

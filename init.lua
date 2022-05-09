@@ -16,4 +16,4 @@ require "user.octo"
 require "user.hop"
 require "user.illuminate"
 require "user.catppuccin"
-
+require "user.vim-latex-live"
