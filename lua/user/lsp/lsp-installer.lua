@@ -19,6 +19,11 @@ lsp_installer.on_server_ready(function(server)
     opts = vim.tbl_deep_extend("force", vimls_opts, opts)
   end
 
+  if server.name == "texlab" then
+    local texlab = require "user.lsp.settings.texlab"
+    opts = vim.tbl_deep_extend("force", texlab, opts)
+  end
+
   if server.name == "cssls" then
     local cssls_opts = require "user.lsp.settings.cssls"
     opts = vim.tbl_deep_extend("force", cssls_opts, opts)
