@@ -108,6 +108,12 @@ keymap(
   ":Telescope file_browser<cr>",
   opts
 )
+keymap(
+  "n",
+  ";u",
+  "<cmd>cd %:h<cr>",
+  opts
+)
 
 
 -- 3 nnoremap <silent> ;f <cmd>Telescope find_files<cr>
@@ -119,7 +125,7 @@ keymap(
 --   9 nnoremap <silent> ;d <cmd>Telescope file_browser<cr>
 --  10 nnoremap <silent> ;u <cmd>cd %:h<cr>
 
-keymap("n", "<C-t>", "<cmd>lua vim.lsp.buf.document_symbol()<cr>", opts)
+-- keymap("n", "<C-t>", "<cmd>lua vim.lsp.buf.document_symbol()<cr>", opts)
 keymap("n", "<C-s>", "<cmd>vsplit<cr>", opts)
 keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 keymap("n", "<c-n>", ":e ~/Notes/<cr>", opts)

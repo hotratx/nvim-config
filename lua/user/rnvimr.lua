@@ -29,7 +29,7 @@ vim.g.rnvimr_shadow_winblend = 70
 
 
 -- Map Rnvimr action
-vim.g.rnvimr_action = "{'<C-t>': 'NvimEdit tabedit','<C-x>': 'NvimEdit split','<C-v>': 'NvimEdit vsplit','gw': 'JumpNvimCwd','yw': 'EmitRangerCwd'}"
+-- vim.g.rnvimr_action = "{'<C-t>': 'NvimEdit tabedit','<C-x>': 'NvimEdit split','<C-v>': 'NvimEdit vsplit','gw': 'JumpNvimCwd','yw': 'EmitRangerCwd'}"
 
 -- Add views for Ranger to adapt the size of floating window
 vim.g.rnvimr_ranger_views = "[{'minwidth': 90, 'ratio': []}.{'minwidth': 50, 'maxwidth': 89, 'ratio': [1,1]},{'maxwidth': 49, 'ratio': [1]}]"
