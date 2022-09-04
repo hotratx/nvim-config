@@ -1,68 +1,43 @@
 local catppuccin = require("catppuccin")
+local latte = require("catppuccin.palettes").get_palette "latte"
+local frappe = require("catppuccin.palettes").get_palette "frappe"
+local macchiato = require("catppuccin.palettes").get_palette "macchiato"
+local mocha = require("catppuccin.palettes").get_palette "mocha"
+
+vim.g.catppuccin_flavour = "frappe"
+local colors = require("catppuccin.palettes").get_palette()
 
 catppuccin.setup({
-  transparent_background = true,
-  term_colors = false,
-  styles = {
-    comments = "italic",
-    functions = "italic",
-    keywords = "italic",
-    strings = "NONE",
-    variables = "italic",
-  },
-  integrations = {
-    treesitter = true,
-    native_lsp = {
-      enabled = true,
-      virtual_text = {
-        errors = "italic",
-        hints = "italic",
-        warnings = "italic",
-        information = "italic",
-      },
-      underlines = {
-        errors = "underline",
-        hints = "underline",
-        warnings = "underline",
-        information = "underline",
-      },
-    },
-    lsp_trouble = false,
-    cmp = true,
-    lsp_saga = false,
-    gitgutter = false,
-    gitsigns = true,
-    telescope = true,
-    nvimtree = {
-      enabled = true,
-      show_root = false,
-      transparent_panel = false,
-    },
-    neotree = {
-      enabled = false,
-      show_root = false,
-      transparent_panel = false,
-    },
-    which_key = false,
-    indent_blankline = {
-      enabled = true,
-      colored_indent_levels = false,
-    },
-    dashboard = true,
-    neogit = false,
-    vim_sneak = false,
-    fern = false,
-    barbar = false,
-    bufferline = true,
-    markdown = true,
-    lightspeed = false,
-    ts_rainbow = false,
-    hop = false,
-    notify = true,
-    telekasten = true,
-    symbols_outline = true,
-  }
+	transparent_background = true,
+	term_colors = false,
+	compile = {
+		enabled = false,
+		path = vim.fn.stdpath("cache") .. "/catppuccin",
+	},
+	dim_inactive = {
+		enabled = false,
+		shade = "dark",
+		percentage = 0.15,
+	},
+	styles = {
+		comments = { "italic" },
+		conditionals = { "italic" },
+		loops = {},
+		functions = {},
+		keywords = {},
+		strings = {},
+		variables = {},
+		numbers = {},
+		booleans = {},
+		properties = {},
+		types = {},
+		operators = {},
+	},
+	integrations = {
+		-- For various plugins integrations see https://github.com/catppuccin/nvim#integrations
+	},
+	color_overrides = {},
+	highlight_overrides = {},
 })
 
-
-vim.cmd("colorscheme catppuccin")
+vim.cmd [[colorscheme catppuccin]]

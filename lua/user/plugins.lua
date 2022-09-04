@@ -54,7 +54,10 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope-file-browser.nvim"
 
   -- Treesitter
-  use 'nvim-treesitter/nvim-treesitter'
+  use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+  }
   use 'p00f/nvim-ts-rainbow'
 
 
@@ -120,7 +123,12 @@ return packer.startup(function(use)
   use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
 
   -- Markdown preview
-  use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   -- Snippets
   use 'L3MON4D3/LuaSnip'
