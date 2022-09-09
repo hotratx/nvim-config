@@ -154,4 +154,9 @@ return packer.startup(function(use)
       require 'alpha'.setup(require 'alpha.themes.startify'.config)
     end
   }
+
+  -- Terminal
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end}
 end)
