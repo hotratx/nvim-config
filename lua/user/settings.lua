@@ -42,6 +42,7 @@ local options = {
 
 vim.opt.termguicolors = true
 vim.g.mkdp_auto_start = 0
+vim.g.clipboard = 1
 -- vim.gloaded_clipboard_provider = 1
 
 for k, v in pairs(options) do
@@ -64,3 +65,17 @@ vim.cmd [[set shell=zsh]]
 
 
 vim.opt.shortmess:append "c"
+
+
+vim.g.clipboard = {
+  name = 'myClipboard',
+  copy = {
+      ["+"] = {'tmux', 'load-buffer', '-'},
+      ["*"] = {'tmux', 'load-buffer', '-'},
+  },
+  paste = {
+      ["+"] = {'tmux', 'save-buffer', '-'},
+      ["*"] = {'tmux', 'save-buffer', '-'},
+  },
+  cache_enabled = true,
+}

@@ -145,6 +145,7 @@ return packer.startup(function(use)
 
   -- Clipboard
   use 'AckslD/nvim-neoclip.lua'
+  use {'ojroques/nvim-osc52'}
 
   -- Surround
   use "Mephistophiles/surround.nvim"

@@ -225,6 +225,11 @@ _G.packer_plugins = {
     path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/nvim-neoclip.lua",
     url = "https://github.com/AckslD/nvim-neoclip.lua"
   },
+  ["nvim-osc52"] = {
+    loaded = true,
+    path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/nvim-osc52",
+    url = "https://github.com/ojroques/nvim-osc52"
+  },
   ["nvim-transparent"] = {
     loaded = true,
     path = "/home/hotratx/.local/share/nvim/site/pack/packer/start/nvim-transparent",
