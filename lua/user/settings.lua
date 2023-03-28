@@ -42,6 +42,7 @@ local options = {
 
 vim.opt.termguicolors = true
 vim.g.mkdp_auto_start = 0
+-- vim.gloaded_clipboard_provider = 1
 
 for k, v in pairs(options) do
   vim.opt[k] = v
@@ -49,6 +50,7 @@ end
 
 vim.cmd([[ syntax on ]])
 vim.cmd "set whichwrap+=<,>,[,],h,l"
+vim.cmd [[set clipboard+=unnamedplus]]
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 vim.cmd [[set nocompatible]]
@@ -58,8 +60,7 @@ vim.cmd [[set showcmd]]
 vim.cmd [[set cursorline]]
 vim.cmd [[highlight Visual cterm=NONE ctermbg=236 ctermfg=NONE guibg=Grey40]]
 vim.cmd [[set shell=zsh]]
-vim.cmd [[set clipboard+=unnamedplus]]
-vim.wo.colorcolumn = '80'
+-- vim.wo.colorcolumn = '80'
 
 
 vim.opt.shortmess:append "c"

@@ -38,6 +38,7 @@ packer.init {
   },
 }
 
+
 -- Install your plugins here
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
@@ -66,7 +67,12 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use {
+    "williamboman/mason.nvim",
+    run = ":MasonUpdate" -- :MasonUpdate updates registry contents
+  }
+  use "williamboman/mason-lspconfig.nvim"
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "filipdutescu/renamer.nvim"
@@ -136,6 +142,9 @@ return packer.startup(function(use)
 
   -- Commentary
   use 'tpope/vim-commentary'
+
+  -- Clipboard
+  use 'AckslD/nvim-neoclip.lua'
 
   -- Surround
   use "Mephistophiles/surround.nvim"

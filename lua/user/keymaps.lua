@@ -9,6 +9,11 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.g.clipboard = {
+  name = 'TmuxTermux',
+  cache_enabled = 1,
+}
+
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
