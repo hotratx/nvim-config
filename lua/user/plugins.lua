@@ -121,7 +121,10 @@ return packer.startup(function(use)
   -- use 'airblade/vim-gitgutter'
 
   -- Motion
-  use "phaazon/hop.nvim"
+  use {
+    "phaazon/hop.nvim",
+    branch = 'v2'
+  }
 
   -- emmet expand html
   use 'mattn/emmet-vim'
