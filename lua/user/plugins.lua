@@ -79,12 +79,16 @@ return packer.startup(function(use)
   use "simrat39/symbols-outline.nvim"
   use "ray-x/lsp_signature.nvim"
   use "b0o/SchemaStore.nvim"
-  use {
-    "folke/trouble.nvim",
-    cmd = "TroubleToggle",
-  }
+  -- use {
+  --   "folke/trouble.nvim",
+  --   cmd = "TroubleToggle",
+  -- }
   use "github/copilot.vim"
   use "RRethy/vim-illuminate"
+  use {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons"
+  }
 
   -- CMP
   use 'hrsh7th/nvim-cmp'
@@ -129,10 +133,10 @@ return packer.startup(function(use)
   use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
 
   -- Markdown preview
-  use({
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
-  })
+  -- use({
+  --     "iamcco/markdown-preview.nvim",
+  --     run = function() vim.fn["mkdp#util#install"]() end,
+  -- })
 
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
