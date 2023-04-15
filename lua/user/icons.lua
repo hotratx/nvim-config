@@ -122,7 +122,6 @@ else
       Class = "",
       Interface = " ",
       Module = " ",
-      Property = " ",
       Property = "",
       Unit = " ",
       Value = " ",
