@@ -14,12 +14,15 @@ local actions = null_ls.builtins.code_actions
 -- npm install --save-dev prettier prettier-plugin-solidity
 null_ls.setup({
   sources = {
+    -- null_ls.builtins.diagnostics.ruff,
     actions.eslint,
      formatting.prettier.with({
-        filetypes = { "html", "json", "yaml", "markdown" },
+        filetypes = { "html", "json", "yaml", "markdown", "py" },
     }),
     diagnostics.flake8,    -- formatting.prettier.with {
     formatting.black,
+    formatting.isort
+    -- null_ls.builtins.formatting.black
     --   extra_filetypes = { "toml", "solidity" },
     --   extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     -- },
